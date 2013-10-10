@@ -1,0 +1,15 @@
+<h1>List of teams currently avalible</h1>
+
+<table>
+  <tr>
+    <th>Team</th>
+    <th>Hometown</th>
+  </tr>
+
+<%@teams.each do |team| %>
+  <tr>
+    <td><%= team.name %></td>
+    <td><%= team.hometown %></td>
+    <% end %>
+  </tr>
+</table>
