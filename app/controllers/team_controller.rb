@@ -1,8 +1,6 @@
 class TeamController < ApplicationController
-  def teams
+  def team
   end
-  def create_team
-  @team = Team.new
-  @teams.save
-end
+  def new
+  end
 end
