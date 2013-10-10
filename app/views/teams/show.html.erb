@@ -1,4 +1,9 @@
-<p>
-  <strong>list of teams</strong>
-  <%= @team.hometown %>
-</p>
+<!-- <h1><%= @team.name %></h1>
+<p>The home town for the <%=@team.name %> is <%= @team.hometown %>
+</p> -->
+
+<h1>Listing teams</h1>
+
+<%@teams.each do |team| %>
+<%= team.name %>
+<% end %>
