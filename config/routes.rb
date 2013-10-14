@@ -4,7 +4,11 @@ Nba::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root :to => 'home#index'
-  resources :teams
+  resources :teams do
+    collection do
+      get 'remove_all'
+    end
+  end
   # get "/teams/new" => "team#new"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

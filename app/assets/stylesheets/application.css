@@ -41,7 +41,12 @@ h1
     border-color: white;
   }
 
-  #link
+#link
   {
     float:right;
+  }
+
+th
+  {
+    padding:15px;
   }

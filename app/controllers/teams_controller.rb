@@ -11,24 +11,32 @@ class TeamsController < ApplicationController
   end
 
   def new
+    @team = Team.new
   end
 
   def create
     @team = Team.new team_params
    
     @team.save
-    redirect_to @team
+    flash[:alert] = "New team created"
+    redirect_to teams_path
   end
 
   def show
    @team = Team.find(params[:id])
   end 
 
+  def edit
+  @team = Team.find(params[:id])
+
+  end
+
   def update
-    @team = Team.find(params[:id])
+    team = Team.find(params[:id])
    
-    if @Team.update(params[:id].permit(:name, :hometown))
-      redirect_to @team
+    if team.update(params[:team].permit(:name, :hometown))
+      redirect_to teams_path
+      flash[:alert] = "Team edited"
     else
       render 'edit'
     end
@@ -37,8 +45,15 @@ class TeamsController < ApplicationController
   def destroy
   @team = Team.find(params[:id])
   @team.destroy
+  flash[:alert] = "Team Destroyed"
  
   redirect_to teams_path
+  end
+
+  def remove_all
+    Team.destroy_all
+    flash[:alert] = "All Teams destroyed"
+    redirect_to teams_path
   end
 
   private
