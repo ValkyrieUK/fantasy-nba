@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  # before_filter :authenticate_user!
+ before_filter :authenticate_user!
 
   def index
     @teams = Team.all
@@ -23,6 +23,16 @@ class TeamsController < ApplicationController
   def show
    @team = Team.find(params[:id])
   end 
+
+  def update
+    @team = Team.find(params[:id])
+   
+    if @Team.update(params[:id].permit(:name, :hometown))
+      redirect_to @team
+    else
+      render 'edit'
+    end
+  end
 
   def destroy
   @team = Team.find(params[:id])
