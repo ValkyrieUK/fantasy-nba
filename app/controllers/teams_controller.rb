@@ -1,8 +1,13 @@
 class TeamsController < ApplicationController
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
   def index
     @teams = Team.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @teams }
+      format.xml { render xml: @teams }
+    end
   end
 
   def new
@@ -18,6 +23,13 @@ class TeamsController < ApplicationController
   def show
    @team = Team.find(params[:id])
   end 
+
+  def destroy
+  @team = Team.find(params[:id])
+  @team.destroy
+ 
+  redirect_to teams_path
+  end
 
   private
   
