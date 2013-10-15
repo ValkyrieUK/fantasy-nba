@@ -1,3 +1,6 @@
+<div id="link"><%= link_to("Add a new team", new_team_path) %></div>
+<br>
+<div id="link"><%= link_to("Delete all teams from the database", remove_all_teams_path) %></div>
 <h1>List of teams currently avalible</h1>
 
 <table>
@@ -6,10 +9,14 @@
     <th>Hometown</th>
   </tr>
 
-<%@teams.each do |team| %>
+<% @teams.each do |team| %>
   <tr>
     <td><%= team.name %></td>
     <td><%= team.hometown %></td>
+    <td><%= team.id %></td>
+    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'edit', edit_team_path(team) %></td>
     <% end %>
   </tr>
 </table>
+
