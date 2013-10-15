@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
       :email,
       :current_password,
       :first_name,
-      :last_name
+      :last_name,
+      :favourite_team
     ]
   end
 end
