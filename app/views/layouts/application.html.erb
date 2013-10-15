@@ -12,7 +12,7 @@
    <li class='active'><%= link_to('Home', root_path)%></li>
    <li class='has-sub'><%= link_to('Teams', teams_path)%></a>
       <ul>
-         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+         <li class='has-sub'><%= link_to('Teams', teams_path)%></a>
             <ul>
                <li><a href='#'><span>Sub Item</span></a></li>
                <li class='last'><a href='#'><span>Sub Item</span></a></li>
@@ -27,6 +27,11 @@
       </ul>
    </li>
   <%= display_login %>
+  <% if user_signed_in? %>
+  <li><%= link_to "Profile", current_user %></li>
+  <% else %>
+  <% end %>
+</div>
 
 </header>
 <body>
