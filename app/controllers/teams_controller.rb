@@ -12,11 +12,20 @@ class TeamsController < ApplicationController
 
   def new
     @team = Team.new
+    @team.refresh_teams
   end
 
   def create
     @team = Team.new team_params
    
+    # require 'nokogiri'
+    # require 'open-uri'
+    # url = "http://www.nba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html"
+    # doc = Nokogiri::HTML(open(url))
+    # doc.css("tr.title:has(td:contains('Western')) ~tr").each do |team|
+    #   p team.search('td')[0].text
+    # end
+
     @team.save
     flash[:alert] = "New team created"
     redirect_to teams_path
