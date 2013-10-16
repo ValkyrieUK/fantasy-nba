@@ -1,2 +1,11 @@
-<h1>Welcome to some NBA related thing.... </h1> 
+<h1>NBA Scores!</h1> 
 <div id="infobox"><p>content</p></div>
+
+      <% if @teams %>
+        <ul>
+          <% @teams.each do |team| %>
+            <li><%= team %></li>
+            <li><%= teams_wins %></li>
+          <% end %>
+        </ul>
+      <% end %>

@@ -13,7 +13,8 @@
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div><%= f.label :favourite_team %><br />
-  <%= f.text_field :favourite_team %></div>
+    <% teams = Team.all.map {|team| [team.name, team.id]} %>
+  <%= f.select(:favourite_team, teams) %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
