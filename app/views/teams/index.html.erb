@@ -5,14 +5,12 @@
 
 <table>
   <tr>
-    <th>Hometown</th>
     <th>Team</th>
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
-    <td><%= team.hometown %></td>
-    <td><%= team.name %></td>
+    <td><%= link_to team.name, team %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to 'edit', edit_team_path(team) %></td>
     <% end %>

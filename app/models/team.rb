@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 class Team < ActiveRecord::Base
-  validates :hometown, :presence => true
+  #validates :hometown, :presence => true
   validates_uniqueness_of :name
 
 
