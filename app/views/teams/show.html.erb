@@ -1,3 +1,14 @@
 <h1><%= @team.name %></h1>
-
+<table>
+  <tr>
+    <th>Wins</th>
+    <th>Last 10</th>
+    <th>Streak</th>
+</tr>
+  <tr>
+    <td><%= @team.wins %></td>
+    <td><%= @team.l10 %></td>
+    <td><%= @team.streak %></td>
+  </tr>
+</table>
 <%= link_to("Click here to go to the list of teams", teams_path) %>
