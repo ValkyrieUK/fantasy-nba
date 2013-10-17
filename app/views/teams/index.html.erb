@@ -1,16 +1,25 @@
-<div id="link"><%= link_to("Add a new team", new_team_path) %></div>
+<div id="link"><% if user_signed_in? %>
+  <%= link_to("Add a new team", new_team_path) %></div>
 <br>
 <div id="link"><%= link_to("Delete all teams from the database", remove_all_teams_path) %></div>
+<% else %>
+<% end %>
 <h1>List of teams currently avalible</h1>
 
 <table>
   <tr>
     <th>Team</th>
+    <th>Wins</th>
+    <th>Last 10</th>
+    <th>Streak</th>
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
     <td><%= link_to team.name, team %></td>
+    <td><%= team.wins %></td>
+    <td><%= team.l10 %></td>
+    <td><%= team.streak %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to 'edit', edit_team_path(team) %></td>
     <% end %>
