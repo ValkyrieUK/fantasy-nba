@@ -18,7 +18,7 @@
 }
 #cssmenu {
   height: 70px;
-  background-color: #232323;
+  background-color: #1874CD;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   width: auto;
 }
@@ -28,7 +28,7 @@
   position: relative;
 }
 #cssmenu > ul > li > a {
-  color: #a0a0a0;
+  color: #FFFFFF;
   font-family: Verdana, 'Lucida Grande';
   font-size: 15px;
   line-height: 70px;
@@ -45,7 +45,7 @@
   opacity: 0;
   visibility: hidden;
   padding: 16px 0 20px 0;
-  background-color: #fafafa;
+  background-color: #1874CD;
   text-align: left;
   position: absolute;
   top: 55px;
@@ -71,7 +71,7 @@
 #cssmenu > ul > li > ul:before {
   content: '';
   display: block;
-  border-color: transparent transparent #fafafa transparent;
+  border-color: transparent transparent #1874CD transparent;
   border-style: solid;
   border-width: 10px;
   position: absolute;
@@ -83,10 +83,10 @@
   position: relative;
 }
 #cssmenu ul ul a {
-  color: #323232;
+  color: #FFFFFF;
   font-family: Verdana, 'Lucida Grande';
   font-size: 13px;
-  background-color: #fafafa;
+  background-color: #1874CD;
   padding: 5px 8px 7px 16px;
   display: block;
   -webkit-transition: background-color 0.1s;
@@ -95,7 +95,7 @@
   transition: background-color 0.1s;
 }
 #cssmenu ul ul a:hover {
-  background-color: #f0f0f0;
+  background-color: #1874CD;
 }
 #cssmenu ul ul ul {
   visibility: hidden;
@@ -104,7 +104,7 @@
   top: -16px;
   left: 206px;
   padding: 16px 0 20px 0;
-  background-color: #fafafa;
+  background-color: #1874CD;
   text-align: left;
   width: 180px;
   -webkit-transition: all .3s;
@@ -125,5 +125,5 @@
 }
 #cssmenu ul ul a:hover {
   background-color: #cc2c24;
-  color: #f0f0f0;
+  color: #FFFFFF;
 }
