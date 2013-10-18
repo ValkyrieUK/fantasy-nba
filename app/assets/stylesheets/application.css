@@ -52,3 +52,14 @@ th
   {
     padding:15px;
   }
+
+.notice
+  {
+    text-align: center;
+    background-color: rgba(24,116,205);
+  }
+.alert
+  {
+    text-align: center;
+    background-color: rgb(204,44,36);
+  }

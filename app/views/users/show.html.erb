@@ -1,0 +1,4 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<p>Your favourite team is <%= @user.favourite_team %></p>
+
+<%= gravatar_image_tag(@user.email.gsub(@user.first_name, @user.last_name)) %>

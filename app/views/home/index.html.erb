@@ -4,7 +4,7 @@
 <% if @teams %>
 <ul>
   <% @teams.each_slice(2) do |team| %>
-    <input type="button" value="<%= team[0] %>" onclick="myFunction('<%= team[0] %>');" />@
+    <input type="button" value="<%= team[0] %>" onclick="myFunction('<%= team[0] %>');" />
     <input type="button" value="<%= team[1] %>" onclick="myFunction('<%= team[1] %>');"/><br><br>
   <% end %>
 </ul>
