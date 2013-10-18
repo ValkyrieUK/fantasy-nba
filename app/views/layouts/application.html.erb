@@ -6,8 +6,10 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<header>  
+<header>
+<center><img src="http://notsportscenter.com/wp-content/uploads/2013/03/nba_logo.png" width="30%" height="auto" /></center>
 <div id='cssmenu'>
+
 <ul>
    <li class='active'><%= link_to('Home', root_path)%></li>
    <li class='has-sub'><%= link_to('NBA', teams_path)%></a>
@@ -21,9 +23,10 @@
   <li><%= link_to "Profile", current_user %></li>
   <% else %>
   <% end %>
-<img src="http://notsportscenter.com/wp-content/uploads/2013/03/nba_logo.png" width="10%" height="auto" align="right" />
+
 </ul>
 </div>
+
 </header>
 
 <body>
